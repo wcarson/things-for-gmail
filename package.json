@@ -10,9 +10,9 @@
     "lint:prettier": "prettier --list-different --write src",
     "lint": "run-s lint:prettier lint:eslint",
     "pull": "clasp pull",
-    "push": "clasp push -f",
+    "push": "clasp push --force",
     "watch:webpack": "webpack --mode=development --watch --color --progress",
-    "watch:clasp": "clasp push -f -w",
+    "watch:clasp": "clasp push --force --watch",
     "watch": "run-p watch:webpack watch:clasp"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "@types/google-apps-script": "^1.0.45",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "copy-webpack-plugin": "^10.2.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
