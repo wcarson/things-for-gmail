@@ -1,0 +1,34 @@
+{
+  "timeZone": "GMT",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/script.send_mail"
+  ],
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Things for Gmail",
+      "logoUrl": "https://lh3.googleusercontent.com/nCxQdodNVqbdnvizyqaCArVuh3NuZy1OOsI8g1355PA9xIO-p9-tG9lRd_pb5wXUOQL2HTQ9-6aANp-z4krg5wasvMjY2Jwx6mwS2MN2GaS6aNvFuh4ik_Y8Fe9sBPfeV2ZtoFnle-tlDvWBsSN-fm7fxQuBCvhxlA7gju6E2xBSHBgBwbrpsjQ5TU1_q6OEKwZ9-G-R-Y-JwH2XV3y1e5TjXkmaT2dnJrCD7zO-YdN8QfckNcJZj0X0W6qqkO1LOPN00UBjIh5CG3x2xSyELQP3FXP3pJTZSqp6AZafJBNDliwfoCPWXIVkA86UrP7g1xMpgZccUyHIuWYbyj6fYFvyLOcXthl6htV0pjgDfqkRd-7Q_3swt9Dq-ECoL5dI42iXY7mBYngHJs1XLXt8KBsfJkOb5Vc7QO-iKimn6-56PmZNCYfgjgr-FhhEMOBgeBdyYuzEZwWIOyaCrbt09vUS9CKkdEWUq3QboP_tG51hq9quMkMsEnSDrPf9XedFVuJ4OHHiryleI1aPFGThFp2RjZDXui90fPCJDIskYqpcy_3610-tbOJz1STjZskcx0y6CsVbt6RZ1ESsTBqHT_5_ejRRyDpPYF2PgTDAPdedp7oE-6w6ZXRlHK06lXQJxsvFu8qZg8brkwZtme_sEN7nqkPR21BMRVfffqR8sXiiEds6Yt64peQtxNTYBQF_rqmS4orBN5O5HH6M2NJXBMo",
+      "layoutProperties": {
+        "primaryColor": "#2473e7"
+      },
+      "universalActions": [
+        {
+          "label": "Settings",
+          "runFunction": "onSettingsClicked"
+        }
+      ]
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onEmailSelected"
+        }
+      ]
+    }
+  }
+}
